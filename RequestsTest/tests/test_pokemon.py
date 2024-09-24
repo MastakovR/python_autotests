@@ -14,7 +14,7 @@ def test_status_code():
 
 def test_part_of_response(): 
      response_get = requests.get(url = f'{URL}/pokemons', params = {'trainer_id': TRAINER_ID} )
-     assert response_get.json()['data'][0]["name"] == 'thwackey'
+     assert response_get.json()['data'][0]["name"] == 'thwackey', 'another name'
 
 
 @pytest.mark.parametrize('key, value', [('name', 'thwackey'), ('trainer_id', TRAINER_ID), ('id', '73894')]) 
